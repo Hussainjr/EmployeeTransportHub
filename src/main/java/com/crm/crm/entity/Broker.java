@@ -1,15 +1,15 @@
 package com.crm.crm.entity;
 
 import jakarta.persistence.*;
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
+import java.util.Date;
 
-import java.util.LinkedHashSet;
-import java.util.Set;
-
-@Data
+@Getter
+@Setter
 @Entity
-@Table(name = "stop")
-public class Stop {
+@Table(name = "Broker")
+public class Broker {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
@@ -18,6 +18,8 @@ public class Stop {
     @Column(name = "name", nullable = false)
     private String name;
 
+    @Column(name = "salary", nullable = false)
+    private Integer salary;
 
 
 }

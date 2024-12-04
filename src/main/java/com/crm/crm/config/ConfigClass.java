@@ -11,4 +11,5 @@ public class ConfigClass {
     public ModelMapper getMapper(){
         return new ModelMapper();
     }
+
 }
