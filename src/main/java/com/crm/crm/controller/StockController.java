@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping
+@RequestMapping("/api/v1/stockController")
 public class StockController {
 
     @Autowired private StockService stockService;
