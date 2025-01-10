@@ -13,18 +13,14 @@ import java.util.Optional;
 @Service
 public class StockService implements StockServiceInterface{
 
-    @Autowired
-    private StockRepository stockRepository;
-
-    @Autowired
-    private ModelMapper modelMapper;
+    @Autowired private StockRepository stockRepository;
+    @Autowired private ModelMapper modelMapper;
 
     @Override
     public StockDto saveStock(StockDto dto) {
         Stock mapped = modelMapper.map(dto, Stock.class);
         Stock saved = stockRepository.save(mapped);
-        StockDto stockDto = modelMapper.map(saved, StockDto.class);
-        return stockDto;
+        return modelMapper.map(saved, StockDto.class);
     }
 
     @Override
